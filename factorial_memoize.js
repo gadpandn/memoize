@@ -4,8 +4,6 @@
 	}
 	return num * factorial(num -1)
 });
-
-
 function memoize(func) {
 	var cache = {};
 	return function() {
@@ -21,7 +19,7 @@ function memoize(func) {
 		}
 	}
 };
-
+// With IFFE
 fact = (function(){
 	var memo = {};
 	function clousre(n){
@@ -36,7 +34,6 @@ fact = (function(){
 	return clousre;
 })();
 
-console.log(fact(5));
-console.log(fact(5));
+
 
 
