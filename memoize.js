@@ -1,9 +1,6 @@
 let arr = [{id:1,value:"first11"},{id:2,value:"first22"},
            {id:3,value:"first333"},{id:4,value:"first44"}]
 
-
-
-
 function memoize(func) {
   var cache = {};
   return function() {
@@ -31,5 +28,5 @@ var find = memoize(function(id) {
     return result
 })
 
-find(2);
-find(2);
+find(2); 
+find(2); // bring result from cache object
